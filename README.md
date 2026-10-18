@@ -93,18 +93,12 @@ Robustness checks (computed from nvda_walk_forward_results.csv):
 •	News is not used as a model feature; it is collected and scored as context only, and covers only the last 30 days.
 •	Post engagement and author follower counts are not yet used for weighting; timestamps are aggregated by UTC calendar date, not aligned to market hours.
 •	Simulation ignores slippage, taxes and position sizing; Sharpe uses a 0% risk-free rate.
-8. Planned improvements
-1.	Re-scrape the full 180-day window in date slices and store raw data in data/raw/.
-2.	Add engagement- and follower-weighted sentiment, sentiment change, and lagged sentiment; align posts to the 4pm ET close.
-3.	Predict log returns per horizon with a gap in the walk-forward splits and a minimum training window.
-4.	Report MAE, directional accuracy, Sharpe, Sortino and max drawdown for every horizon, against persistence, buy-and-hold and the mean-reversion benchmark.
-5.	Move the notebook logic into modules (ingest, features, model, evaluate, plots).
-6.	Add charts: sentiment vs price over time, equity curve vs benchmarks, drawdown.
 
 
 
 
-9. Repository contents
+
+8. Repository contents
 File	Description
 Copy_of_CrowdWisdom_Sentiment_Price_Prediction.ipynb	Main notebook: data collection, sentiment, features, models, evaluation
 nvda_forecast.csv	n+0 … n+5 forecast table
