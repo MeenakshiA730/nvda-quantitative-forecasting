@@ -1,17 +1,4 @@
-"""Regenerate all report charts for the NVDA sentiment/price project.
 
-Usage:
-    python make_charts.py                      # uses CSVs in the current folder
-    python make_charts.py --tweets clean_tweets.csv   # also draws the sentiment-vs-price chart
-
-Inputs
-    nvda_walk_forward_results.csv  (from the notebook: date, close, actual_next_close,
-                                    predicted_next_close, actual_return, strategy_return,
-                                    equity, drawdown, position)
-    nvda_forecast.csv              (Horizon, Forecast Date, Predicted Close)
-    clean_tweets.csv   (optional)  (createdAt, sentiment)  one row per post
-Outputs: PNG files in ./charts/
-"""
 import argparse
 import os
 
